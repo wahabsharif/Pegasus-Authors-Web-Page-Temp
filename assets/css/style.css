@@ -261,7 +261,7 @@ header {
 }
 
 .hero-image {
-  max-width: 50%;
+  width: 50%;
 }
 
 .hero-image img {
@@ -290,10 +290,12 @@ header {
 
 .media-icons {
   align-items: center;
+  display: flex;
+  justify-content: center;
   gap: 1rem;
 }
 
-.media-icons img {
+.media-icons a img {
   width: 25px;
   height: auto;
 }
