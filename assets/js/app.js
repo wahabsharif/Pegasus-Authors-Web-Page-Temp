@@ -37,3 +37,17 @@ function toggleMenu() {
     menu.classList.toggle("active");
     hamburger.textContent = menu.classList.contains("active") ? "✖" : "☰";
 }
+
+// Close menu when clicking on a menu link
+document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        const menu = document.querySelector(".menu");
+        const hamburger = document.querySelector(".hamburger");
+
+        menu.style.height = "0";
+        menu.style.padding = "0";
+        menu.classList.remove("active");
+        hamburger.textContent = "☰";
+    });
+});
+
