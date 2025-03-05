@@ -155,4 +155,41 @@
         flex: 0 0 100%;
         scroll-snap-align: start;
     }
+
+    .footer-container {
+        /* Stack items vertically instead of side by side */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-left {
+        /* Remove the right margin and add bottom spacing for stacking */
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-divider {
+        /* Hide or adjust the divider for smaller screens */
+        display: none;
+    }
+
+    .footer-right {
+        /* Center-align text and items */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-text {
+        /* Remove extra margin on smaller screens */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        /* Make sure the social icons are also centered */
+        justify-content: center;
+    }
+
 }
