@@ -142,4 +142,17 @@
         margin: 0 auto;
         max-width: 600px;
     }
+
+    .books-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+        /* Keep cards in a single row */
+    }
+
+    .book-card {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
 }

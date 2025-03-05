@@ -353,9 +353,6 @@ header {
   background-color: #02203f;
 }
 
-/* ---------------------- */
-/* More Books Section     */
-/* ---------------------- */
 .more-books {
   text-align: center;
 }
@@ -368,13 +365,15 @@ header {
 
 .books-container {
   padding: 60px 20px;
-  background-color: rgb(51 51 67);
+  background-color: rgb(51, 51, 67);
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+  /* For desktop, allow wrapping if needed */
   flex-wrap: wrap;
 }
 
+/* Card styles remain unchanged */
 .book-card {
   border-radius: 5px;
   max-width: 200px;
@@ -387,7 +386,7 @@ header {
   height: auto;
   margin-bottom: 15px;
   border-radius: 3px;
-  border: #fdfaf9 .125rem solid;
+  border: #fdfaf9 0.125rem solid;
 }
 
 .book-card h3 {
@@ -416,6 +415,7 @@ header {
 .book-card button:hover {
   background-color: #333333;
 }
+
 
 
 /* Footer */

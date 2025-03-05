@@ -38,7 +38,6 @@ function toggleMenu() {
     hamburger.textContent = menu.classList.contains("active") ? "✖" : "☰";
 }
 
-// Close menu when clicking on a menu link
 document.querySelectorAll(".menu a").forEach(link => {
     link.addEventListener("click", () => {
         const menu = document.querySelector(".menu");
@@ -51,3 +50,34 @@ document.querySelectorAll(".menu a").forEach(link => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector('.books-container');
+    const originalCards = Array.from(container.querySelectorAll('.book-card'));
+    const totalCards = originalCards.length;
+
+    originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        container.appendChild(clone);
+    });
+    originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        container.insertBefore(clone, container.firstChild);
+    });
+
+    let cardWidth = originalCards[0].offsetWidth;
+
+    container.scrollLeft = cardWidth * totalCards;
+
+    window.addEventListener("resize", () => {
+        cardWidth = originalCards[0].offsetWidth;
+        container.scrollLeft = cardWidth * totalCards;
+    });
+
+    container.addEventListener('scroll', () => {
+        if (container.scrollLeft <= 0) {
+            container.scrollLeft = cardWidth * totalCards;
+        } else if (container.scrollLeft >= cardWidth * (totalCards * 2)) {
+            container.scrollLeft = cardWidth * totalCards;
+        }
+    });
+});
