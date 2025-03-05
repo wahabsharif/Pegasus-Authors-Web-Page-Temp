@@ -119,14 +119,6 @@ p {
   font-family: system-ui, sans-serif;
 }
 
-/* FONT SIZE */
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
 
 .font-48 {
   font-size: 3rem;
@@ -194,6 +186,16 @@ h5,
 p,
 a {
   color: #011526;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 100;
 }
 
 /* HEADER */
